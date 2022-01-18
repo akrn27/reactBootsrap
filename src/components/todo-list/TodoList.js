@@ -1,12 +1,12 @@
 import './TodoList.css';
 
-const TodoList = () => {
+const TodoList = (props) => {
     return (
-        <ul>
-            <li>Learn React</li>
-            <li>Build Tools</li>
-            <li>Record</li>
-        </ul>
+        <ul>{
+             props.dataTodos.map(() => {
+                 return <li key={todo.id}>{todo.title}</li>
+             })
+        }</ul>
     )
 }
 
