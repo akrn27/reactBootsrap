@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Operan from './Operan';
 
 //state propsgit st
 export default class StateProps extends Component {
@@ -9,7 +10,7 @@ export default class StateProps extends Component {
         }
     }
 
-    gantiMakanan(makanan_baru){
+    gantiMakanan = (makanan_baru) => {
         this.setState({
             makanan: makanan_baru
         })
@@ -20,6 +21,7 @@ export default class StateProps extends Component {
         <div>
             <h2>{this.state.makanan}</h2>
             <button onClick={() => this.gantiMakanan("Soto")}>Ganti Makanan</button>
+            <Operan makanan={this.state.makanan} gantiMakanan={this.gantiMakanan}/>
         </div>
         )
     }
