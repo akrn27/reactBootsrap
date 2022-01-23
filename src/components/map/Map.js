@@ -22,7 +22,12 @@ const makanans = [
 const Map = () => {
   return (
       <div>
-          
+          <h2>Map</h2>
+          <ul>
+              {makanans.map((makanan) => (
+                  <li>{makanan.nama} - Harga {makanan.harga}</li>
+              ))}
+          </ul>
       </div>
   )
 };
