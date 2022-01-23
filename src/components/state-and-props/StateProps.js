@@ -9,11 +9,17 @@ export default class StateProps extends Component {
         }
     }
 
+    gantiMakanan(makanan_baru){
+        this.setState({
+            makanan: makanan_baru
+        })
+    }
 
     render() {
         return (
         <div>
-
+            <h2>{this.state.makanan}</h2>
+            <button onClick={() => this.gantiMakanan("Soto")}>Ganti Makanan</button>
         </div>
         )
     }

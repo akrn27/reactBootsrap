@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import StateProps from './components/state-and-props/StateProps';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <StateProps />
   </React.StrictMode>,
   document.getElementById('root')
 );

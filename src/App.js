@@ -1,4 +1,5 @@
 import './App.css';
+import StateProps from './components/state-and-props/StateProps';
 import Todo from './components/todo/Todo';
 
 const App = () => {
