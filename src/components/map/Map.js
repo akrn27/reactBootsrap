@@ -19,6 +19,12 @@ const makanans = [
   },
 ];
 
+// REDUCE
+const total_bayar = makanans.reduce((total_harga, makanan) => {
+    return total_harga+makanan.harga;
+}, 0);
+
+// MAP
 const Map = () => {
   return (
     <div>
@@ -31,6 +37,7 @@ const Map = () => {
         ))}
       </ul>
 
+{/* FILTER */}
       <h2>Map Filter harga yang lebih dari 11.000</h2>
       <ul>
         {makanans
@@ -41,8 +48,11 @@ const Map = () => {
             </li>
           ))}
       </ul>
+
+      <h3>Total Harga : {total_bayar}</h3>
     </div>
   );
 };
+
 
 export default Map;
