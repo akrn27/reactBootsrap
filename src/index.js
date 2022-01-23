@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateProps from './components/state-and-props/StateProps';
+import Map from './components/map/Map';
 
 ReactDOM.render(
   <React.StrictMode>
-    <StateProps />
+    <Map />
   </React.StrictMode>,
   document.getElementById('root')
 );
