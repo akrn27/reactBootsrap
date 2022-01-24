@@ -5,10 +5,11 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import StateProps from './components/state-and-props/StateProps';
 import Map from './components/map/Map';
+import Lifecycle from './components/lifecycle/Lifecycle';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Map />
+    <Lifecycle />
   </React.StrictMode>,
   document.getElementById('root')
 );
