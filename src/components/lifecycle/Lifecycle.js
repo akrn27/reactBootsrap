@@ -31,7 +31,10 @@ export default class Lifecycle extends Component {
     return (
       <div>
         <h2>{this.state.makanan}</h2>
-        <Sublifecycle />
+
+        {this.state.tampilHalamanSub && <Sublifecycle ubahMakanan={(value) => this.ubahMakanan(value)} />}
+
+        <button onClick={() => this.setState({tampilHalamanSub: !this.state.tampilHalamanSub})}>Tampil Halaman</button>
       </div>
     );
   }
