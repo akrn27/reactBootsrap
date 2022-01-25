@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import { NavbarComponent } from './NavbarComponent';
+import { Tabel } from './Tabel';
 
-export default class index extends Component {
+export default class Crud extends Component {
   render() {
     return (
         <div>
             <NavbarComponent />
-            <h2>Halo ini adwad</h2>
+            <div className="container mt-4">
+                <Tabel />
+            </div>
         </div>
     )
   }
