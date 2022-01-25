@@ -7,9 +7,12 @@ import StateProps from './components/state-and-props/StateProps';
 import Map from './components/map/Map';
 import Lifecycle from './components/lifecycle/Lifecycle';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Crud from './components/crud';
+
 ReactDOM.render(
   <React.StrictMode>
-    <Lifecycle />
+    <Crud />
   </React.StrictMode>,
   document.getElementById('root')
 );
