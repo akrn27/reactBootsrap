@@ -25,6 +25,18 @@ export default class Crud extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+
+    this.setState({
+      makanans: [
+        ...this.state.makanans,
+        {
+          id: this.state.makanans.length+1,
+          nama: this.state.nama,
+          deskripsi: this.state.deskripsi,
+          harga: this.state.harga
+        }
+      ]
+    })
   }
 
   render() {
@@ -32,7 +44,7 @@ export default class Crud extends Component {
         <div>
             <NavbarComponent />
             <div className="container mt-4">
-                <Tabel />
+                <Tabel makanans={this.state.makanans}/>
                 <Formulir {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             </div>
         </div>

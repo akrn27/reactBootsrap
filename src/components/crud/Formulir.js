@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
-const Formulir = () => {
+const Formulir = ({nama, deskripsi, harga, handleChange, handleSubmit}) => {
   return (
     <div className="mt-5">
       <Row>
@@ -12,15 +12,15 @@ const Formulir = () => {
       </Row>
       <Row>
         <Col>
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="nama">
               <Form.Label>Nama Makanan</Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Masukkan Nama Makanan"
                 name="nama"
-                value={this.props.nama}
-                onChange={(event) => this.props.handleChange(event)}
+                value={nama}
+                onChange={(event) => handleChange(event)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="deskripsi">
@@ -29,8 +29,8 @@ const Formulir = () => {
                 as="textarea"
                 rows={3}
                 name="deskripsi"
-                value={this.props.deskripsi}
-                onChange={(event) => this.props.handleChange(event)}
+                value={deskripsi}
+                onChange={(event) => handleChange(event)}
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="harga">
@@ -39,8 +39,8 @@ const Formulir = () => {
                 type="number"
                 placeholder="Masukkan Harga"
                 name="harga"
-                value={this.props.harga}
-                onChange={(event) => this.props.handleChange(event)}
+                value={harga}
+                onChange={(event) => handleChange(event)}
               />
             </Form.Group>
             <Button variant="primary" type="submit">

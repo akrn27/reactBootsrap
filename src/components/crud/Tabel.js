@@ -2,7 +2,7 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 
 // Table
-export const Tabel = () => {
+export const Tabel = ({makanans}) => {
   return (
     <Table striped bordered hover>
     <thead>
@@ -15,13 +15,17 @@ export const Tabel = () => {
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td></td>
-      </tr>
+      {makanans.map((makanan, index) => {
+        return (
+          <tr>
+            <td>{index}</td>
+            <td>{makanan.nama}</td>
+            <td>{makanan.deskripsi}</td>
+            <td>Rp. {makanan.harga}</td>
+            <td></td>
+          </tr>
+        )
+      })}
     </tbody>
   </Table>
   )
