@@ -19,14 +19,19 @@ const Formulir = () => {
                 type="text"
                 placeholder="Masukkan Nama Makanan"
                 name="nama"
+                value={this.props.nama}
+                onChange={(event) => this.props.handleChange(event)}
               />
             </Form.Group>
-            <Form.Group
-              className="mb-3"
-              controlId="deskripsi"
-            >
+            <Form.Group className="mb-3" controlId="deskripsi">
               <Form.Label>Deskripsi</Form.Label>
-              <Form.Control as="textarea" rows={3} name="deskripsi"/>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                name="deskripsi"
+                value={this.props.deskripsi}
+                onChange={(event) => this.props.handleChange(event)}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="harga">
               <Form.Label>Harga</Form.Label>
@@ -34,6 +39,8 @@ const Formulir = () => {
                 type="number"
                 placeholder="Masukkan Harga"
                 name="harga"
+                value={this.props.harga}
+                onChange={(event) => this.props.handleChange(event)}
               />
             </Form.Group>
             <Button variant="primary" type="submit">
