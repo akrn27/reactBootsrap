@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Form, Button } from "react-bootstrap";
 
+// Form
 const Formulir = ({nama, deskripsi, harga, handleChange, handleSubmit}) => {
   return (
     <div className="mt-5">
