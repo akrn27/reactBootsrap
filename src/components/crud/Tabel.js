@@ -17,7 +17,7 @@ export const Tabel = ({makanans, editData}) => {
     <tbody>
       {makanans.map((makanan, index) => {
         return (
-          <tr>
+          <tr key={index}>
             <td>{index+1}</td>
             <td>{makanan.nama}</td>
             <td>{makanan.deskripsi}</td>
