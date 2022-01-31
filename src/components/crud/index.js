@@ -46,12 +46,16 @@ export default class Crud extends Component {
     })
   }
 
+  editData = (id) => {
+    console.log("id: ", id)
+  }
+
   render() {
     return (
         <div>
             <NavbarComponent />
             <div className="container mt-4">
-                <Tabel makanans={this.state.makanans}/>
+                <Tabel makanans={this.state.makanans} editData={this.editData}/>
                 <Formulir {...this.state} handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
             </div>
         </div>
